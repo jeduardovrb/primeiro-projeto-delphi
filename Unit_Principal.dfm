@@ -10,8 +10,10 @@ object Form_Principal: TForm_Principal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
-  WindowState = wsMaximized
+  Position = poScreenCenter
+  ShowHint = True
   PixelsPerInch = 96
   TextHeight = 13
   object btnOla: TBitBtn
@@ -19,7 +21,9 @@ object Form_Principal: TForm_Principal
     Top = 72
     Width = 153
     Height = 49
+    Hint = 'Bot'#227'o Ol'#225' Mundo!'
     Caption = 'Ol'#225' Mundo!'
     TabOrder = 0
+    OnClick = btnOlaClick
   end
 end

@@ -9,6 +9,7 @@ uses
 type
   TForm_Principal = class(TForm)
     btnOla: TBitBtn;
+    procedure btnOlaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -21,5 +22,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm_Principal.btnOlaClick(Sender: TObject);
+begin
+  ShowMessage('Olá Mundo!');
+end;
 
 end.
