@@ -9,7 +9,18 @@ uses
 type
   TForm_Principal = class(TForm)
     btnOla: TBitBtn;
+    edtPrimeiro: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit1: TEdit;
+    lblNome: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
     procedure btnOlaClick(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -26,6 +37,15 @@ implementation
 procedure TForm_Principal.btnOlaClick(Sender: TObject);
 begin
   ShowMessage('Olá Mundo!');
+end;
+
+procedure TForm_Principal.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+  begin
+    Key := #0;
+    Perform(Wm_NextDlgCtl, 0, 0);
+  end;
 end;
 
 end.

@@ -2,8 +2,8 @@ object Form_Principal: TForm_Principal
   Left = 0
   Top = 0
   Caption = 'Primeiro Projeto Delphi'
-  ClientHeight = 201
-  ClientWidth = 447
+  ClientHeight = 235
+  ClientWidth = 274
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,18 +12,103 @@ object Form_Principal: TForm_Principal
   Font.Style = []
   KeyPreview = True
   OldCreateOrder = False
-  Position = poScreenCenter
+  Position = poDesktopCenter
   ShowHint = True
+  WindowState = wsMaximized
+  OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
+  object lblNome: TLabel
+    Left = 24
+    Top = 19
+    Width = 33
+    Height = 13
+    Caption = 'C'#243'digo'
+  end
+  object Label2: TLabel
+    Left = 30
+    Top = 43
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+  end
+  object Label3: TLabel
+    Left = 32
+    Top = 70
+    Width = 25
+    Height = 13
+    Caption = 'CNPJ'
+  end
+  object Label4: TLabel
+    Left = 38
+    Top = 97
+    Width = 19
+    Height = 13
+    Caption = 'CEP'
+  end
+  object Label5: TLabel
+    Left = 36
+    Top = 124
+    Width = 21
+    Height = 13
+    Caption = 'RUA'
+  end
   object btnOla: TBitBtn
-    Left = 160
-    Top = 72
-    Width = 153
+    Left = 72
+    Top = 160
+    Width = 121
     Height = 49
     Hint = 'Bot'#227'o Ol'#225' Mundo!'
     Caption = 'Ol'#225' Mundo!'
-    TabOrder = 0
+    TabOrder = 5
     OnClick = btnOlaClick
+  end
+  object edtPrimeiro: TEdit
+    Left = 72
+    Top = 16
+    Width = 121
+    Height = 21
+    ReadOnly = True
+    TabOrder = 0
+    Text = '1'
+  end
+  object Edit2: TEdit
+    Left = 72
+    Top = 67
+    Width = 121
+    Height = 21
+    TabOrder = 2
+    Text = 'Edit2'
+  end
+  object Edit3: TEdit
+    Left = 72
+    Top = 94
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    Text = 'Edit3'
+  end
+  object Edit4: TEdit
+    Left = 72
+    Top = 121
+    Width = 121
+    Height = 21
+    TabOrder = 4
+    Text = 'Edit4'
+  end
+  object Edit1: TEdit
+    Left = 72
+    Top = 40
+    Width = 121
+    Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    MaxLength = 10
+    ParentFont = False
+    TabOrder = 1
+    Text = 'Edit1'
   end
 end

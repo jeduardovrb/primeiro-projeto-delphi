@@ -1,0 +1,46 @@
+unit Unit_Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TForm_Principal = class(TForm)
+    btnOla: TBitBtn;
+    edtPrimeiro: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit1: TEdit;
+    procedure btnOlaClick(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_Principal: TForm_Principal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm_Principal.btnOlaClick(Sender: TObject);
+begin
+  ShowMessage('Olá Mundo!');
+end;
+
+procedure TForm_Principal.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+  begin
+    Key := #0;
+    Perform(Wm_NextDlgCtl, 0, 0);
+  end;
+end;
+
+end.
